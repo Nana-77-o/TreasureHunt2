@@ -10,4 +10,19 @@ public class SoundM : MonoBehaviour
     {
         DontDestroyOnLoad(BGM.gameObject);
     }
+    private void Update()
+    {
+        if(SceneManager.GetActiveScene().name == "Setting")
+        {
+            //DontDestroyOnLoad(BGM.gameObject);
+        }
+        else if(SceneManager.GetActiveScene().name == "StartScene")
+        {
+
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }
