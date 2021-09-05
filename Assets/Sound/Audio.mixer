@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!245 &-6324673188052061134
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OptionSoundShot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 132a13e1b8e8a1149beea7de0e343358
+  m_FloatValues:
+    6f5fe88b3bc31d643913a039cdeb06fa: -10.345207
+  m_TransitionOverrides: {}
 --- !u!244 &-4466709168705071125
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -58,17 +70,23 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: -6324673188052061134}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: dc49fc845fbb48f4bb8d7c3120def408
+    name: BGMVol
+  - guid: 6f5fe88b3bc31d643913a039cdeb06fa
+    name: MasterVol
+  - guid: d563e72c145d6d94f9d273f099bc122f
+    name: SEVol
   m_AudioMixerGroupViews:
   - guids:
     - 841ab8d59a0188743a38e24afb77c557
     - 259ac4f2415518d4b8f81fe60c500131
     - 84e7b90ab63d389438b4b06159b2eaa4
-    - 12e9db60b9f3fe7449ab99e8c4f3002b
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -84,7 +102,6 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 4462965453737040058}
   - {fileID: 8269957846338723552}
-  - {fileID: -486185875761417749}
   m_Volume: 6f5fe88b3bc31d643913a039cdeb06fa
   m_Pitch: 5e75e0ee72c3b634795c9e19f93fee8f
   m_Send: 00000000000000000000000000000000
@@ -114,7 +131,7 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Snapshot
+  m_Name: GameSoundShot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 0ff5a146d5cf41e4e99d96588faf54fd
   m_FloatValues: {}

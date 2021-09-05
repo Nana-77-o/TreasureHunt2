@@ -10,6 +10,7 @@ public class Count : MonoBehaviour
     public Text TreasureCount;
     public AudioClip sound1;
     AudioSource audioSoure;
+    [SerializeField] private GameObject GameClereCanvas;
 
     private void Start()
     {
@@ -23,10 +24,11 @@ public class Count : MonoBehaviour
             count++;
             TreasureCount.text =+ count +"/5" ;
             Destroy(collision.gameObject);
+            if(count == 5)
+            {
+                GameClereCanvas.SetActive(true);
+            }
         }
-        if(count == 5 && Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("StartScene");
-        }
+       
     }
 }

@@ -15,15 +15,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Setting.unity
     guid: f1f39c048329f8e478ae97a56b5dbd89
   - enabled: 1
-    path: Assets/Scenes/Hard.unity
-    guid: 608a1c4cdf8d5e2478493c893a941e42
-  - enabled: 1
     path: Assets/Scenes/Easy.unity
-    guid: e6aae833f91b4d842ac6b905fc1646f4
+    guid: 7adeb85ca2be54b46ac2575679b99d2e
   - enabled: 1
-    path: Assets/Scenes/Expert.unity
-    guid: 3e5e21015ddfd21499cdc1f197de05a0
+    path: Assets/Scenes/Hard.unity
+    guid: 5bb03409b8e851249b86c2c030ac1951
   - enabled: 1
     path: Assets/Scenes/Pirate.unity
-    guid: 1296532dead91f341a4edbb4334d6659
+    guid: 8e1ab656444e3ed459e8676adca7bb93
+  - enabled: 1
+    path: Assets/Scenes/Expert.unity
+    guid: 96930ee77483ca245a2b09842f4f4d6a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
