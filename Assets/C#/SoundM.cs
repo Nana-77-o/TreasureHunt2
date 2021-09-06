@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 public class SoundM : MonoBehaviour
 {
     public AudioSource BGM;
-    void Start()
-    {
-        DontDestroyOnLoad(BGM.gameObject);
-    }
     private void Update()
     {
         if(SceneManager.GetActiveScene().name == "Setting")

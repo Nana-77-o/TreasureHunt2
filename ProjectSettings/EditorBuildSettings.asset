@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Expert.unity
     guid: 96930ee77483ca245a2b09842f4f4d6a
+  - enabled: 1
+    path: Assets/Scenes/Preload.unity
+    guid: 6eda616e08f4d454eb9fe99c124d4d11
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
