@@ -8,13 +8,26 @@ public class Count : MonoBehaviour
 {
     private int count = 0;
     public Text TreasureCount;
+
     public AudioClip sound1;
     AudioSource audioSoure;
+
+    static float countTime;
+    public Text text;
+
     [SerializeField] private GameObject GameClereCanvas;
 
     private void Start()
     {
         audioSoure = GetComponent<AudioSource>();
+    }
+    void Update()
+    {
+        if (count <= 4)
+        {
+            countTime += Time.deltaTime;
+            text.text = countTime.ToString("F2");
+        }
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -29,6 +42,10 @@ public class Count : MonoBehaviour
                 GameClereCanvas.SetActive(true);
             }
         }
-       
+
+    }
+    public static float getscore()
+    {
+        return (float)countTime;
     }
 }
