@@ -9,4 +9,25 @@ public class Setting : MonoBehaviour
     {
         SceneManager.LoadScene("Setting");
     }
+    public void Click()
+    {
+        SceneManager.LoadScene("Easy");
+    }
+    public void Nomal()
+    {
+        SceneManager.LoadScene("Nomal");
+    }
+    public void Hard()
+    {
+        SceneManager.LoadScene("Hard");
+    }
+    public void Expert()
+    {
+        SceneManager.LoadScene("Expert");
+    }
+    public void Pirate()
+    {
+        SceneManager.LoadScene("Pirate");
+    }
+
 }
