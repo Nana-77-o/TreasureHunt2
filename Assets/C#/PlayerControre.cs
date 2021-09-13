@@ -6,6 +6,7 @@ public class PlayerControre : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Camera;
+    public GameObject BackCamera;
     public float speed;
     private Transform PlayerTransform;
     private Transform CameraTransform;
@@ -48,7 +49,15 @@ public class PlayerControre : MonoBehaviour
         {
             PlayerTransform.transform.position += dir2 * speed * Time.deltaTime;
         }
-
+        if (Input.GetKey(KeyCode.E))
+        {
+            BackCamera.SetActive(true);
+            
+        }
+        else
+        {
+            BackCamera.SetActive(false);
+        }
     }
 }
 

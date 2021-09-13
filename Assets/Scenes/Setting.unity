@@ -761,8 +761,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "W : \u524D\u9032     Spase : \u30B8\u30E3\u30F3\u30D7\nD : \u53F3        
-    4:\u97F3\u91CF\u8A2D\u5B9A\nA : \u5DE6\nS : \u5F8C\u9000"
+  m_Text: "W : \u524D\u9032    E : \u632F\u308A\u8FD4\u308B\nD : \u53F3        Spase:\u30B8\u30E3\u30F3\u30D7\nA
+    : \u5DE6        4\uFF1A\u8996\u70B9\u79FB\u52D5\nS : \u5F8C\u9000"
 --- !u!222 &1759582796
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -987,4 +987,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c13690835f8d74bba1327c466b574d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGM: {fileID: 0}
