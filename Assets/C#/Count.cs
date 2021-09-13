@@ -14,8 +14,10 @@ public class Count : MonoBehaviour
 
     static float countTime;
     public Text text;
+    float startTime;
 
     [SerializeField] private GameObject GameClereCanvas;
+    [SerializeField] private GameObject fakeClereCanvas;
 
     private void Start()
     {
@@ -25,8 +27,16 @@ public class Count : MonoBehaviour
     {
         if (count <= 4)
         {
-            countTime += Time.deltaTime;
-            text.text = countTime.ToString("F2");
+            startTime += Time.deltaTime;
+            if (startTime >= 4 )
+            {
+                countTime += Time.deltaTime;
+                text.text = countTime.ToString("F2");
+            }
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            fakeClereCanvas.SetActive(false);
         }
     }
     void OnCollisionEnter(Collision collision)
@@ -42,7 +52,11 @@ public class Count : MonoBehaviour
                 GameClereCanvas.SetActive(true);
             }
         }
-
+        if (collision.gameObject.tag == "Treasyre2")
+        {
+            fakeClereCanvas.SetActive(true);
+            Destroy(collision.gameObject);
+        }
     }
     public static float getscore()
     {
