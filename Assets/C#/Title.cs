@@ -9,4 +9,8 @@ public class Title : MonoBehaviour
     {
         SceneManager.LoadScene("StartScene");
     }
+    public void GameOver()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
 }
