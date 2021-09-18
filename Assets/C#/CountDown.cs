@@ -8,6 +8,7 @@ public class CountDown : MonoBehaviour
 	[SerializeField]
 	private Text _textCountdown;
     private float countDown = 3;
+    [SerializeField] GameObject Player;
 
 	[SerializeField] 
 	private GameObject Count;
@@ -30,6 +31,7 @@ public class CountDown : MonoBehaviour
                         if (countDown <= -1)
                         {
                             Count.SetActive(false);
+                            Player.SetActive(true);
                         }
                     }
                     

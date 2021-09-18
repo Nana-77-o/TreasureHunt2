@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Count : MonoBehaviour
 {
@@ -13,11 +10,12 @@ public class Count : MonoBehaviour
     AudioSource audioSoure;
 
     static float countTime;
-    public Text text;
+    public Text timetext;
     float startTime;
 
     [SerializeField] private GameObject GameClereCanvas;
     [SerializeField] private GameObject fakeClereCanvas;
+    [SerializeField] GameObject Player;
 
     private void Start()
     {
@@ -28,10 +26,10 @@ public class Count : MonoBehaviour
         if (count <= 4)
         {
             startTime += Time.deltaTime;
-            if (startTime >= 4 )
+            if (startTime >= 4)
             {
                 countTime += Time.deltaTime;
-                text.text = countTime.ToString("F2");
+                timetext.text = countTime.ToString("F2");
             }
         }
         if (Input.GetMouseButtonDown(0))
@@ -41,15 +39,16 @@ public class Count : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Treasure")
+        if (collision.gameObject.tag == "Treasure")
         {
             audioSoure.PlayOneShot(sound1);
             count++;
-            TreasureCount.text =+ count +"/5" ;
+            TreasureCount.text = +count + "/5";
             Destroy(collision.gameObject);
-            if(count == 5)
+            if (count == 5)
             {
                 GameClereCanvas.SetActive(true);
+                Player.SetActive(false);
             }
         }
         if (collision.gameObject.tag == "Treasyre2")
