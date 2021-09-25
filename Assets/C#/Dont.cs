@@ -20,7 +20,7 @@ public class Dont : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "StartScene")
         {
-
+            this.gameObject.SetActive(true);
         }
         else if(SceneManager.GetActiveScene().name == "Preload")
         {
