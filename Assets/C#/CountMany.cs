@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class Count : MonoBehaviour
+public class CountMany : MonoBehaviour
 {
-    private int count = 0;
+    //多いカウント
+    int count;
     public Text TreasureCount;
     public AudioClip sound1;
     AudioSource audioSoure;
@@ -46,9 +50,9 @@ public class Count : MonoBehaviour
         {
             audioSoure.PlayOneShot(sound1);
             count++;
-            TreasureCount.text = +count + "/5";
+            TreasureCount.text = +count + "/10";
             Destroy(collision.gameObject);
-            if (count == 5)
+            if (count == 10)
             {
                 GameClereCanvas.SetActive(true);
                 Player.SetActive(false);
@@ -60,10 +64,10 @@ public class Count : MonoBehaviour
             fakeClereCanvas.SetActive(true);
             Destroy(collision.gameObject);
         }
-        if(collision.gameObject.tag =="Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             Result.SetActive(true);
-            
+
             Player.SetActive(false);
             Enemy.SetActive(false);
         }

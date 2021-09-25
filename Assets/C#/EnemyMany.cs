@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControre : MonoBehaviour
+public class EnemyMany : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Camera;
@@ -17,11 +17,11 @@ public class PlayerControre : MonoBehaviour
 
         PlayerTransform = transform.parent;
         CameraTransform = GetComponent<Transform>();
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 40; i++)
         {
             //オブジェクトの座標
-            float x = Random.Range(-100.0f, 100.0f);
-            float z = Random.Range(-100.0f, 100.0f);
+            float x = Random.Range(-499.0f, 100.0f);
+            float z = Random.Range(-499.0f, 100.0f);
             float y = 7.0f;
 
             //オブジェクトを生産
@@ -62,7 +62,7 @@ public class PlayerControre : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             BackCamera.SetActive(true);
-            
+
         }
         else
         {
@@ -70,4 +70,3 @@ public class PlayerControre : MonoBehaviour
         }
     }
 }
-
