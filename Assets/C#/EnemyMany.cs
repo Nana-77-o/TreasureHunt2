@@ -17,7 +17,7 @@ public class EnemyMany : MonoBehaviour
 
         PlayerTransform = transform.parent;
         CameraTransform = GetComponent<Transform>();
-        for (int i = 0; i < 40; i++)
+        for (int i = 0; i < 100; i++)
         {
             //オブジェクトの座標
             float x = Random.Range(-499.0f, 100.0f);
