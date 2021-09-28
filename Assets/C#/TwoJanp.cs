@@ -9,9 +9,13 @@ public class TwoJanp : MonoBehaviour
     private Rigidbody rb;// Rigidbodyを扱うための変数
     private float JumpCount = 0;
 
+    public AudioClip sound1;
+    AudioSource audioSoure;
+
     // Start is called before the first frame update    
     void Start()
     {
+        audioSoure = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();//  rbにRigidbodyの値を代入する
     }
 
@@ -24,6 +28,7 @@ public class TwoJanp : MonoBehaviour
             {
                 JumpCount++;//  Groundedをfalseにする
                 rb.AddForce(Vector3.up * JumpPower);//  上にJumpPower分力をかける
+                audioSoure.PlayOneShot(sound1);
             }
         }
     }
