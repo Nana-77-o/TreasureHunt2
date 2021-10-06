@@ -8,7 +8,7 @@ public class PlayerControre : MonoBehaviour
     public GameObject Camera;
     public GameObject BackCamera;
     public float speed;
-    public GameObject Enemy;
+    public float dashSpeed;
     private Transform PlayerTransform;
     private Transform CameraTransform;
 
@@ -17,16 +17,6 @@ public class PlayerControre : MonoBehaviour
 
         PlayerTransform = transform.parent;
         CameraTransform = GetComponent<Transform>();
-        for (int i = 0; i < 5; i++)
-        {
-            //オブジェクトの座標
-            float x = Random.Range(-100.0f, 100.0f);
-            float z = Random.Range(-100.0f, 100.0f);
-            float y = 7.0f;
-
-            //オブジェクトを生産
-            Instantiate(Enemy, new Vector3(x, y, z), Quaternion.identity);
-        }
     }
 
     // Update is called once per frame
@@ -58,6 +48,10 @@ public class PlayerControre : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             PlayerTransform.transform.position += dir2 * speed * Time.deltaTime;
+        }
+        if (Input.GetKey("left shift") && Input.GetKey(KeyCode.W))
+        {
+            PlayerTransform.transform.position += -dir2 * dashSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.E))
         {

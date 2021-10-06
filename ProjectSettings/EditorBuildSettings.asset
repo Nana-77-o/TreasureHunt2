@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Preload.unity
     guid: 6eda616e08f4d454eb9fe99c124d4d11
@@ -19,19 +16,34 @@ EditorBuildSettings:
     guid: f1f39c048329f8e478ae97a56b5dbd89
   - enabled: 1
     path: Assets/Scenes/Easy.unity
-    guid: 8efb92b5942a4ec4abd27c719655b16a
+    guid: 416fbbacccdd0544caab226f86fb1c77
   - enabled: 1
     path: Assets/Scenes/Nomal.unity
     guid: 2b02c29601fc84e49a18fde7fed33f95
   - enabled: 1
     path: Assets/Scenes/Hard.unity
-    guid: 8bcd4a7a556b70b4cb4b0710e8c66544
+    guid: 73643deb8d3722747b38aee2ab2f7942
   - enabled: 1
     path: Assets/Scenes/Expert.unity
-    guid: 60594058ec2cc69428fd85afed3940fb
+    guid: c90689bda3d5fc04981b3ff7f0b8187b
   - enabled: 1
     path: Assets/Scenes/Pirate.unity
-    guid: 9c7c0c8b842ace741bf974df9e47f025
+    guid: 03d0d7d7e9035fa42b0e9cfc1b2598f3
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

@@ -6,6 +6,7 @@ public class RandamP : MonoBehaviour
 {
 	public GameObject cube;
 	public GameObject Treasyre2;
+	public GameObject Enemy;
 	void Start()
 	{
 		//多くて広い
@@ -14,7 +15,7 @@ public class RandamP : MonoBehaviour
 			//オブジェクトの座標
 			float x = Random.Range(-499.0f, 499.0f);
 			float z = Random.Range(-499.0f, 499.0f);
-			float y = 7.0f;
+			float y = 40.0f;
 
 			//オブジェクトを生産
 			Instantiate(cube, new Vector3(x, y, z), Quaternion.identity);
@@ -24,10 +25,23 @@ public class RandamP : MonoBehaviour
 			//オブジェクトの座標
 			float x = Random.Range(-499.0f, 100.0f);
 			float z = Random.Range(-499.0f, 100.0f);
-			float y = 7.0f;
+			float y = 40.0f;
 
 			//オブジェクトを生産
 			Instantiate(Treasyre2, new Vector3(x, y, z), Quaternion.identity);
+		}
+	}
+	void EnemySporn()
+	{
+		for (int i = 0; i < 30; i++)
+		{
+			//オブジェクトの座標
+			float x = Random.Range(-499.0f, 499.0f);
+			float z = Random.Range(-499.0f, 499.0f);
+			float y = 10.0f;
+
+			//オブジェクトを生産
+			Instantiate(Enemy, new Vector3(x, y, z), Quaternion.identity);
 		}
 	}
 }

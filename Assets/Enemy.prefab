@@ -125,4 +125,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 6808712401972938622, guid: 27326620b2bbcf54480692fc0cb042e3, type: 3}
   target: {fileID: 6808712401972938618, guid: 27326620b2bbcf54480692fc0cb042e3, type: 3}
+  EnemySound: {fileID: 0}
   speed: 0.05

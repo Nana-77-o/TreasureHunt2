@@ -15,34 +15,37 @@ public class CountMany : MonoBehaviour
     float countTime;
     public Text timetext;
     public Text risultText;
-    float startTime;
 
     [SerializeField] private GameObject GameClereCanvas;
     [SerializeField] private GameObject fakeClereCanvas;
     [SerializeField] private GameObject Result;
     [SerializeField] GameObject Player;
-    public GameObject Enemy;
+    public bool isTimeUp;
 
     private void Start()
     {
         audioSoure = GetComponent<AudioSource>();
-        Enemy = GameObject.FindWithTag("Enemy");
+        InvokeRepeating("Call", 4, 0.01f);
+        isTimeUp = false;
     }
     void Update()
     {
-        if (count <= 4)
+        if (count <= 9)
         {
-            startTime += Time.deltaTime;
-            if (startTime >= 4)
-            {
-                countTime += Time.deltaTime;
-                timetext.text = countTime.ToString("F2");
-            }
+            timetext.text = countTime.ToString("F2");            
+        }
+        else if (count == 10)
+        {
+            isTimeUp = true;
         }
         if (Input.GetMouseButtonDown(0))
         {
             fakeClereCanvas.SetActive(false);
         }
+    }
+    void Call()
+    {
+        countTime += Time.deltaTime;
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -67,9 +70,7 @@ public class CountMany : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Result.SetActive(true);
-
             Player.SetActive(false);
-            Enemy.SetActive(false);
         }
     }
 }

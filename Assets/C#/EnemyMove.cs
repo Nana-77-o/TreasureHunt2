@@ -33,4 +33,11 @@ public class EnemyMove : MonoBehaviour
             transform.position += transform.forward * speed;                      
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }
